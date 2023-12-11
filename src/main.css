@@ -1,0 +1,880 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@500;600&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+
+:root {
+    --primary-color: #f6f8fd;
+    --secondary-color: #dc3545;
+    --color-text: #231942;
+    --navbar-color: #ffffff;
+    --navbar-color-text: #000000;
+}
+
+/* NAVBAR */
+
+.navbar {
+    position: fixed;
+    padding: 15px 0 15px 0;
+    width: 100%;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    animation-name: fadeInDown;
+    animation-duration: 1s;
+}
+
+.navbar.color-active {
+    background-color: var(--navbar-color);
+    padding: 20px 0 20px 0;
+    border-bottom: 2px solid #dc354638;
+}
+
+.navbar .nav-link a {
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    color: var(--navbar-color-text);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.navbar .nav-link a:hover {
+    color: var(--secondary-color);
+}
+
+.navbar .nav-link a:not(.active) {
+    opacity: 80%;
+}
+
+
+
+.navbar .nav-link .active {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+
+.navbar .nav-link .active:hover {
+    color: var(--navbar-color);
+}
+
+
+
+/* END NAVBAR */
+
+/* SWIPER */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+/* END SWIPER */
+
+/* PRODUCT KAMI */
+.homepage .product {
+    background-color: var(--primary-color);
+    padding-bottom: 100px;
+}
+
+.homepage .product .product-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.homepage .product .row:nth-child(1) h1 {
+    color: var(--color-text);
+    font-weight: bold;
+    font-family: 'Oswald'
+}
+
+.homepage .product .row:nth-child(1) p {
+    color: var(--color-text);
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+.homepage .product .row:nth-child(2) h5 {
+    font-size: 18px;
+}
+
+.homepage .product .row:nth-child(2) p {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.homepage .product .row:nth-child(2) button {
+    font-size: 15px;
+}
+
+
+.homepage .product .row:nth-child(3) h1 {
+    font-size: 24px;
+}
+
+.homepage .product .row:nth-child(3) p {
+    color: var(--color-text);
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.homepage .product .row:nth-child(3) button {
+    font-size: 12px;
+}
+
+@media screen and (max-width: 950px) {
+
+    .homepage .product .row:nth-child(1) h1 {
+        font-size: 25px;
+    }
+
+
+    .homepage .product .row:nth-child(1) p {
+        font-size: 15px;
+    }
+
+    .homepage .product .card .card-body h5 {
+        font-size: 15px;
+        color: var(--color-text);
+    }
+
+    .homepage .product .card .card-text p {
+        font-size: 12px;
+    }
+}
+
+
+/* END PRODUCT KAMI */
+
+/* VIDEO KIJANG INNOVA */
+
+.konten {
+    position: relative;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mainKonten {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.mainKonten p {
+    font-weight: 400;
+    font-size: 30px;
+    font-family: 'Poppins';
+    color: white;
+}
+
+.mainKonten h3 {
+    opacity: 90%;
+    font-size: 20px;
+    font-family: 'Poppins';
+}
+
+.btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: #ff4444;
+    border-color: #ff4444;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #cc0000;
+}
+
+/* Styling untuk layar dengan lebar maksimum 767px */
+@media screen and (max-width: 767px) {
+    .konten {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .video-container {
+        height: auto;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .mainKonten {
+        padding: 0 20px;
+    }
+
+    .mainKonten p,
+    .mainKonten h3 {
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+
+    .btn.btn-danger {
+        font-size: 0.5rem;
+        padding: 8px 20px;
+        border-radius: 25px;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/* END VIDEO KIJANG INNOVA */
+
+/* BEST CAR OF YEAR */
+
+.teksKonten {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.teksKonten h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.teksKonten p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: #ff4444;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #cc0000;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* BEST CAR OF YEAR */
+
+/* TOYOTA RUSH */
+
+.text-choice {
+    background-color: rgba(0, 0, 0, 0.46);
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    margin-right: 20px;
+}
+
+.text-choice h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.text-choice h5 {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: white;
+    opacity: 80%;
+}
+
+.text-choice button {
+    padding: 10px 20px;
+}
+
+.image-with-text {
+    background-image: url(../src/assets/img/rushoke.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: block;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+@media screen and (max-width: 950px) {
+
+    .homepage .product .image-with-text h2 {
+        font-size: 25px;
+    }
+
+    .homepage .product .image-with-text h5 {
+        font-size: 15px;
+    }
+
+    .homepage .product .text-choice button {
+        font-size: 12px;
+    }
+}
+
+
+/* TOYOTA RUSH */
+
+/* FORTUNER */
+.image-fortuner-with-text {
+    background-image: url(../src/assets/img/ft2.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.text-bg-fortuner {
+    padding: 20px;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.text-bg-fortuner h2,
+.text-bg-fortuner h4,
+.text-bg-fortuner h5 {
+    margin-bottom: 15px;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.text-bg-fortuner h5 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 767px) {
+
+    .image-fortuner-with-text,
+    .text-bg-fortuner {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+/* FORTUNER */
+
+/* PROMO */
+
+
+.homepage .promo {
+    background-color: var(--primary-color);
+}
+
+.homepage .promo .row:nth-child(1) h1 {
+    color: var(--color-text);
+    font-weight: bold;
+    font-family: 'Oswald'
+}
+
+
+.homepage .promo .p {
+    color: var(--color-text);
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.homepage .promo .promo-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.homepage .promo .row:nth-child(2) h5 {
+    font-size: 16px;
+}
+
+.homepage .promo .row:nth-child(2) p {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.homepage .promo .row:nth-child(2) button {
+    font-size: 12px;
+}
+
+/* END PROMO */
+
+/* ARTIKEL */
+
+.artikelAll {
+    margin-top: 5px;
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+}
+
+.artikelAll::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.artikelAll:hover::after {
+    background-color: orange;
+}
+
+.artikelAll.active::after {
+    background-color: orange;
+    width: 100%;
+}
+
+.artikelAll.active {
+    color: black
+}
+
+.artikelAll:not(.active) {
+    opacity: 0.5;
+}
+
+.homepage .artikel {
+    background-color: var(--navbar-color)
+}
+
+.homepage .artikel .swiper {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+}
+
+.homepage .artikel .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.homepage .artikel .swiper-slide {
+    /* padding: 5px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transition: box-shadow 0.3s ease;
+
+}
+
+.homepage .artikel .swiper-slide:active {
+    cursor: grabbing;
+}
+
+.homepage .artikel .swiper-slide .dataArtikel h5,
+.homepage .arikel .swiper-slide .dataArtikel p {
+    color: var(--color-text);
+}
+
+.homepage .artikel .swiper-slide .dataArtikel h5 {
+    opacity: 50%;
+    font-size: 12px;
+
+}
+
+.homepage .artikel .swiper-slide .dataArtikel p {
+    font-weight: 100;
+    font-size: 13px;
+    padding: 5px;
+}
+
+.homepage .artikel .swiper-slide button {
+    margin-top: 10px;
+    padding: 5px 50px;
+    font-size: 12px;
+    border: 2px solid var(--color-text);
+    color: var(--color-text);
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.homepage .artikel .swiper-slide button:hover {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* END ARTIKEL */
+
+/* BACKGROUND IMAGE TEST DRIVE */
+
+.homepage .bg-image {
+    background-image: url(../src/assets/img/DriveTest.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 50vh;
+}
+
+.homepage .bg-image h3 {
+    opacity: 70%;
+    font-size: 20px;
+}
+
+.homepage .bg-image .btn-danger {
+    background-color: #ff4444;
+    border-color: #ff4444;
+}
+
+.homepage .bg-image .btn-danger:hover {
+    background-color: #cc0000;
+    border-color: #cc0000;
+}
+
+/*  END BACKGROUND IMAGE TEST DRIVE */
+
+/* Testimonial */
+
+
+.swiper-card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.testimonial-card {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.testimonial h1 {
+    font-family: 'Oswald'
+}
+
+
+.testimonial-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.testimonial-card img {
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.testimonial-card .card-body {
+    padding: 20px;
+}
+
+
+.testimonial-card .card-text {
+    font-size: 16px;
+}
+
+/* Testimonial */
+
+/* Contact */
+
+.faq {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: var(--primary-color);
+    font-family: 'Oswald'
+}
+
+.faq h2 {
+    color: var(--color-text);
+}
+
+.faq .accordion .accordion-button {
+    color: var(--color-text);
+    font-weight: bold;
+    background-color: #ffffff;
+    line-height: 1.5;
+}
+
+.faq .accordion .accordion-button:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.faq .accordion .accordion-body {
+    background-color: #ffffff;
+}
+
+/* Contact  */
+
+.allProduct-page .allProduct {
+    /* SEMUA PRODUCT */
+    padding-top: 150px;
+    padding-bottom: 100px;
+    background-color: var(--primary-color);
+}
+
+.allProduct-page .allProduct .row:nth-child(1) h1 {
+
+    color: var(--color-text);
+}
+
+.allProduct-page .allProduct .row:nth-child(1) p {
+    color: var(--color-text);
+}
+
+/* SEMUA PRODUCT */
+
+/* SEMUA PROMO */
+
+.allPromo-page .allPromo {
+    /* SEMUA PRODUCT */
+    padding-top: 150px;
+    padding-bottom: 100px;
+    background-color: var(--primary-color);
+}
+
+.allPromo-page .allPromo .row:nth-child(1) h1 {
+
+    color: var(--color-text);
+}
+
+.allPromo-page .allPromo .row:nth-child(1) p {
+    color: var(--color-text);
+}
+
+/* SEMUA PROMO */
+
+/* Contact Us */
+
+/* .contactUs-page .contactUs {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.contactUs-page .contactUs .row:nth-child(1) h2 {
+    color: var(--color-text);
+} */
+
+.contactUs {}
+
+.contact-card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.alamat {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Add any additional styles as needed */
+
+
+
+/* Contacu Us */
+
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    min-height: 60vh;
+}
+
+.footer .row:nth-child(1) .col:nth-child(1) h3 {
+    color: var(--color-text);
+}
+
+.footer .row:nth-child(1) .col:nth-child(1) .desc {
+    color: var(--color-text);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer .no a,
+.footer .mail a {
+    display: flex;
+    align-items: center;
+    color: black;
+    column-gap: 5px;
+}
+
+.footer .no a:hover,
+.footer .mail a:hover {
+    color: var(--secondary-color);
+}
+
+.footer .row:nth-child(1) .col:nth-child(2) {
+    gap: 10px;
+}
+
+.footer .row:nth-child(1) .col:nth-child(2) a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer .row:nth-child(1) .col:nth-child(2) a:hover {
+    color: var(--secondary-color);
+}
+
+.footer .subscribes {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.footer .subscribes input {
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+}
+
+.footer .social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer .social i {
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.footer .social i:hover {
+    color: var(--secondary-color);
+}
+
+.footer .row:nth-child(2) {
+    margin-top: 100px;
+}
+
+/* FOOTER */
+
+/* TIPS PAGE */
+
+.tips-page .tipsLamp {
+    height: 560px;
+}
+
+/* TIPS PAGE */
+
+/* PRICE LIST */
+
+.pricelist-page ul li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.pricelist-page .price {
+    font-weight: bold;
+}
+
+.pricelist-page {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background-color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.pricelist-page h2 {
+    color: var(--color-text);
+}
+
+.pricelist-page .accordion .accordion-button {
+    color: var(--color-text);
+    font-weight: bold;
+    background-color: #ffffff;
+    line-height: 1.5;
+}
+
+.pricelist-page .accordion .accordion-button:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.pricelist-page .accordion .accordion-body {
+    background-color: #ffffff;
+}
+
+/* PRICE LIST */

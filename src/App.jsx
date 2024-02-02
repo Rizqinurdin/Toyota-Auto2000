@@ -110,6 +110,9 @@ const ProductRoute = [
   {
     path: "agya-sport", component: AgyaSportDetail
   },
+  {
+    path: "veloz", component: ReadMoreProduct
+  }
 ]
 
 function App() {

@@ -95,7 +95,7 @@ const ProductComponent = () => {
                                                         <Card.Text>
                                                             {mpv.price}
                                                         </Card.Text>
-                                                        <Link to={`/innovaDetail`}>
+                                                        <Link to={`innova`}>
                                                             <Button variant="danger btn-sm">Read More</Button>
                                                         </Link>
                                                     </Card.Body>
@@ -152,7 +152,7 @@ const ProductComponent = () => {
                                                         <Card.Text>
                                                             {mpv.price}
                                                         </Card.Text>
-                                                        <Link to={`/productToyota`}>
+                                                        <Link to={`/product/veloz`}>
                                                             <Button variant="danger btn-sm">Read More</Button>
                                                         </Link>
                                                     </Card.Body>

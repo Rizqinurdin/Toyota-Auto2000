@@ -109,7 +109,7 @@ const HomePage = () => {
                                                 <p>{product.price}
                                                 </p>
                                             </Card.Text>
-                                            <Button variant="danger" size="sm" onClick={() => navigate("/alphardDetail")}>Read More</Button>
+                                            <Button variant="danger" size="sm" onClick={() => navigate("/product/alphard")}>Read More</Button>
                                         </Card.Body>
                                     </Card>
                                 </Col>
@@ -126,7 +126,7 @@ const HomePage = () => {
                                                 <p>{product.price}
                                                 </p>
                                             </Card.Text>
-                                            <Button variant="danger" size="sm" onClick={() => navigate("/innovaDetail")}>Read More</Button>
+                                            <Button variant="danger" size="sm" onClick={() => navigate("/product/innova")}>Read More</Button>
                                         </Card.Body>
                                     </Card>
                                 </Col>
@@ -143,7 +143,7 @@ const HomePage = () => {
                                                 <p>{product.price}
                                                 </p>
                                             </Card.Text>
-                                            <Button variant="danger" size="sm" onClick={() => navigate("/voxyDetail")}>Read More</Button>
+                                            <Button variant="danger" size="sm" onClick={() => navigate("/product/voxy")}>Read More</Button>
                                         </Card.Body>
                                     </Card>
                                 </Col>
@@ -160,7 +160,7 @@ const HomePage = () => {
                                                 <p>{product.price}
                                                 </p>
                                             </Card.Text>
-                                            <Button variant="danger" size="sm" onClick={() => navigate("/productToyota")}>Read More</Button>
+                                            <Button variant="danger" size="sm" onClick={() => navigate("/product/veloz")}>Read More</Button>
                                         </Card.Body>
                                     </Card>
                                 </Col>

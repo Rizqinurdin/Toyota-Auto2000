@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom"
 const NavBarComponent = () => {
 
     const [changeColor, setChangeColor] = useState(false);
+    const [expanded, setExpanded] = useState(false);
 
     const changeBackgroundColor = () => {
         if (window.scrollY > 10) {
@@ -32,18 +33,18 @@ const NavBarComponent = () => {
 
     return (
         <div>
-            <Navbar expand="lg" fixed="top" className={changeColor ? "color-active" : ""}>
+            <Navbar expanded={expanded} expand="lg" fixed="top" className={changeColor ? "color-active" : ""}>
                 <Container>
                     <Navbar.Brand href="#home">
                         <img src={Icon} alt="icon-img" className="w-50" />
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Toggle onClick={() => setExpanded(expanded ? false : "expanded")} aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mx-auto text-center">
                             {navLinks.map((link) => {
                                 return (
                                     <div className='nav-link' key={link.id}>
-                                        <NavLink to={link.path} className={({ isActive, isPending }) =>
+                                        <NavLink onClick={() => setExpanded(false)} to={link.path} className={({ isActive, isPending }) =>
                                             isPending ? "pending" : isActive ? "active" : ""
                                         } end>{link.text}</NavLink>
                                     </div>

@@ -36,7 +36,7 @@ const ContactPage = () => {
                                                 <strong className='ms-3'>Telpon:</strong>
                                             </Col>
                                             <Col md={6}>
-                                                0885817211644
+                                                0858-1721-1644
                                             </Col>
                                         </Row>
                                     </ListGroup.Item>
@@ -132,10 +132,7 @@ const ContactPage = () => {
                     <Row>
                         <div className='alamat mt-5' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                             <h1 className='fw-bold'>PT Astra Internasional Tbk <br />TOYOTA SALES OPERATION-CAB CILEDUG <br /></h1>
-                            <p>Jl. Ciledug Raya No.16, Petukangan Selatan Pesanggrahan = Jakarta Selatan 12270 <br />
-                                Mohon ditransfer atas Nama PT.Astra Internasional Tbk : <br />
-                                BCA - Cabang Bintaro No. Rek : 6800 304 430 <br />
-                                Bank Permata - Cabang Bintaro No. Rek : 0 2000 33116</p>
+
                         </div>
                     </Row>
                 </Container>

@@ -1,9 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, Accordion } from 'react-bootstrap';
 import {
-    priceListVios, priceListCorolla, priceListCorollaCross, priListCamry, priceListAgya,
-    priceListYaris, priceListCalya, priceListAvanza, priceListVeloz, priceListInnova, priceListVoxy,
-    priceListVelfire, priceListAlphard, priceListFortuner
+    priceListVios, priceListCorolla, priListCamry, priceListAgya,
+    priceListYaris, priceListCalya, priceListAvanza, priceListVeloz, priceListInnova, priceListVoxy, priceListAlphard, priceListFortuner, priceListRaize, priceListRush
 } from '../data/index';
 import BgImage from "../assets/img/bg-sales.jpg"
 
@@ -42,27 +41,6 @@ const PricelistComponent = () => {
                 </Row>
                 <Row className='justify-content-center pt-3'>
                     {priceListCorolla.map((data) => (
-                        <Col key={data.id} lg={6}>
-                            <Accordion className='shadow-sm' data-aos="fade-up" data-aos-duration="1000" data-aos-delay={data.delay}>
-                                <Accordion.Item eventKey='0'>
-                                    <Accordion.Header className='text-center'>{data.title}</Accordion.Header>
-                                    <Accordion.Body>
-                                        <ul className='list-unstyled'>
-                                            {data.product.map((item, index) => (
-                                                <li key={index} className='text-center'>
-                                                    <span>{item}</span>
-                                                    <span className='price'>{data.price[index]}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </Accordion.Body>
-                                </Accordion.Item>
-                            </Accordion>
-                        </Col>
-                    ))}
-                </Row>
-                <Row className='justify-content-center pt-3'>
-                    {priceListCorollaCross.map((data) => (
                         <Col key={data.id} lg={6}>
                             <Accordion className='shadow-sm' data-aos="fade-up" data-aos-duration="1000" data-aos-delay={data.delay}>
                                 <Accordion.Item eventKey='0'>
@@ -272,7 +250,7 @@ const PricelistComponent = () => {
                     ))}
                 </Row>
                 <Row className='justify-content-center pt-3'>
-                    {priceListVelfire.map((data) => (
+                    {priceListAlphard.map((data) => (
                         <Col key={data.id} lg={6}>
                             <Accordion className='shadow-sm' data-aos="fade-up" data-aos-duration="1000" data-aos-delay={data.delay}>
                                 <Accordion.Item eventKey='0'>
@@ -293,7 +271,28 @@ const PricelistComponent = () => {
                     ))}
                 </Row>
                 <Row className='justify-content-center pt-3'>
-                    {priceListAlphard.map((data) => (
+                    {priceListRaize.map((data) => (
+                        <Col key={data.id} lg={6}>
+                            <Accordion className='shadow-sm' data-aos="fade-up" data-aos-duration="1000" data-aos-delay={data.delay}>
+                                <Accordion.Item eventKey='0'>
+                                    <Accordion.Header className='text-center'>{data.title}</Accordion.Header>
+                                    <Accordion.Body>
+                                        <ul className='list-unstyled'>
+                                            {data.product.map((item, index) => (
+                                                <li key={index} className='text-center'>
+                                                    <span>{item}</span>
+                                                    <span className='price'>{data.price[index]}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                        </Col>
+                    ))}
+                </Row>
+                <Row className='justify-content-center pt-3'>
+                    {priceListRush.map((data) => (
                         <Col key={data.id} lg={6}>
                             <Accordion className='shadow-sm' data-aos="fade-up" data-aos-duration="1000" data-aos-delay={data.delay}>
                                 <Accordion.Item eventKey='0'>

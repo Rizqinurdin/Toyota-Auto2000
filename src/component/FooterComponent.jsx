@@ -4,25 +4,35 @@ import { Link } from "react-router-dom"
 import Icon from "../assets/img/icon.png"
 
 const FooterComponent = () => {
+
+    const handleWhatsAppChat = () => {
+        const phoneNumber = '+6285817211644';
+        const message = 'Halo, saya ingin memesan produk Toyota';
+        const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+        window.open(whatsappURL, '_blank');
+    };
     return (
         <div className="footer py-5">
             <Container>
                 <Row className="d-flex justify-content-between">
                     <Col lg="5">
                         <img src={Icon} alt="icon-img" className="w-50" />
-                        <p className="desc mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tempore repellendus deleniti ipsum amet veritatis?</p>
+                        <p className="desc mt-4">Jl. Ciledug Raya No.16, Petukangan Selatan Pesanggrahan = Jakarta Selatan 12270 <br />
+                            Mohon ditransfer atas Nama PT.Astra Internasional Tbk : <br />
+                            BCA - Cabang Bintaro No. Rek : 6800 304 430 <br />
+                            Bank Permata - Cabang Bintaro No. Rek : 0 2000 33116</p>
                         <div className="no mb-2 mt-4">
                             <Link className="text-decoration-none">
                                 <i className="fa-brands fa-whatsapp"></i>
-                                <p className="m-0">+6221 22455773</p>
+                                <p className="m-0" onClick={handleWhatsAppChat}>6285817211644</p>
                             </Link>
                         </div>
-                        <div className="mail">
+                        {/* <div className="mail">
                             <Link className="text-decoration-none">
                                 <i className="fa-regular fa-envelope"></i>
                                 <p className="m-0">info@indivaragroup.com</p>
                             </Link>
-                        </div>
+                        </div> */}
                     </Col>
                     <Col className="d-flex flex-column col-lg-2 col mt-lg-0 mt-5">
                         <h5 className="fw-bold">Menu</h5>
@@ -48,7 +58,7 @@ const FooterComponent = () => {
                 </Row>
                 <Row>
                     <Col>
-                        <p className="text-center px-md-0 px-3">&copy; Copyright {new Date().getFullYear()} by <span className="fw-bold">PT Indivara Group</span>, All Right Reserved</p>
+                        <p className="text-center px-md-0 px-3">&copy; Copyright {new Date().getFullYear()} by <span className="fw-bold">Hamba Allah SWT</span>, All Right Reserved</p>
                     </Col>
                 </Row>
             </Container>

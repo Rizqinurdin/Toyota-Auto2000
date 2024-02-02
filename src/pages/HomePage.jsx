@@ -1,9 +1,10 @@
 import { Container, Row, Col, Card, Button } from "react-bootstrap"
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { artikel, gambar, news, prodcutCard, promo, testimonial, tipes } from "../data/index"
+import { useNavigate, Link } from "react-router-dom";
+import { artikel, gambar, innovaZenixProductHEV, multiPurposeVehicle, newAvanzaVeloz, newVoxy, news, promo, testimonial, tipes } from "../data/index"
 import { banner } from "../data/index";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import cicilanSyariahImage from "../assets/img/Syariah3.png";
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
@@ -24,11 +25,26 @@ const HomePage = () => {
     };
 
     const handleWhatsAppChat = () => {
-        const phoneNumber = '082172056024';
-        const message = 'Halo, saya tertarik dengan layanan dan konsultasi Toyota.';
-        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        const phoneNumber = '+6285817211644';
+        const message = 'Halo, saya ingin menanyakan untuk Konstultasi Toyota';
+        const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
         window.open(whatsappURL, '_blank');
     };
+
+    const handleWhatsAppChatTestDrive = () => {
+        const phoneNumber = '+6285817211644';
+        const message = 'Halo, saya ingin menanyakan Konsultasi Test Drive';
+        const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+        window.open(whatsappURL, '_blank');
+    };
+
+    const handleWhatsAppChatAdviser = () => {
+        const phoneNumber = '+6285817211644';
+        const message = 'Halo, saya ingin menanyakan untuk Konsultasi Toyota';
+        const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+        window.open(whatsappURL, '_blank');
+    };
+
 
     const handleInstagramFollow = () => {
         const instagramUsername = '@rizqinurdin_';
@@ -59,6 +75,20 @@ const HomePage = () => {
                     </SwiperSlide>
                 ))}
             </Swiper>
+            <Container>
+                <Row className="cicilan-section">
+                    <h2 className="fw-bold text-center mt-5">Cicilan Syariah</h2>
+                    <p className="text-center">
+                        Dapatkan kemudahan pembayaran dengan sistem cicilan syariah yang sesuai dengan prinsip-prinsip keuangan Islam. Kami menyediakan opsi pembayaran yang transparan dan adil.
+                    </p>
+                    <Col md={12} className="text-center" data-aos="fade-up" data-aos-duration="1000">
+                        <img src={cicilanSyariahImage} alt="Cicilan Syariah" className="img-fluid w-100" style={{ maxWidth: '100%' }} />
+
+                    </Col>
+                </Row>
+            </Container>
+
+
             <div className="product">
                 <Container>
                     <Row className="justify-content-center align-items-center">
@@ -68,13 +98,64 @@ const HomePage = () => {
                         </Col>
                     </Row>
                     <Row>
-                        {prodcutCard.map((product) => {
+                        {multiPurposeVehicle.map((product) => {
                             return (
                                 <Col md-4 key={product.id} md={3} className="productCard mt-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={product.delay}>
                                     <Card className="product-card shadow-sm mb-4">
                                         <Card.Img src={product.image} alt="productCard" />
                                         <Card.Body>
-                                            <h5 className="fw-bold">{product.productMerk}</h5>
+                                            <h5 className="fw-bold fs-6">{product.title}</h5>
+                                            <Card.Text>
+                                                <p>{product.price}
+                                                </p>
+                                            </Card.Text>
+                                            <Button variant="danger" size="sm" onClick={() => navigate("/alphardDetail")}>Read More</Button>
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
+                            );
+                        })}
+                        {innovaZenixProductHEV.map((product) => {
+                            return (
+                                <Col md-4 key={product.id} md={3} className="productCard mt-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={product.delay}>
+                                    <Card className="product-card shadow-sm mb-4">
+                                        <Card.Img src={product.image} alt="productCard" />
+                                        <Card.Body>
+                                            <h5 className="fw-bold fs-6">{product.title}</h5>
+                                            <Card.Text>
+                                                <p>{product.price}
+                                                </p>
+                                            </Card.Text>
+                                            <Button variant="danger" size="sm" onClick={() => navigate("/innovaDetail")}>Read More</Button>
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
+                            );
+                        })}
+                        {newVoxy.map((product) => {
+                            return (
+                                <Col md-4 key={product.id} md={3} className="productCard mt-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={product.delay}>
+                                    <Card className="product-card shadow-sm mb-4">
+                                        <Card.Img src={product.image} alt="productCard" />
+                                        <Card.Body>
+                                            <h5 className="fw-bold fs-6">{product.title}</h5>
+                                            <Card.Text>
+                                                <p>{product.price}
+                                                </p>
+                                            </Card.Text>
+                                            <Button variant="danger" size="sm" onClick={() => navigate("/voxyDetail")}>Read More</Button>
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
+                            );
+                        })}
+                        {newAvanzaVeloz.map((product) => {
+                            return (
+                                <Col md-4 key={product.id} md={3} className="productCard mt-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={product.delay}>
+                                    <Card className="product-card shadow-sm mb-4">
+                                        <Card.Img src={product.image} alt="productCard" />
+                                        <Card.Body>
+                                            <h5 className="fw-bold fs-6">{product.title}</h5>
                                             <Card.Text>
                                                 <p>{product.price}
                                                 </p>
@@ -85,6 +166,7 @@ const HomePage = () => {
                                 </Col>
                             );
                         })}
+
                     </Row>
                 </Container>
                 <Container>
@@ -92,7 +174,7 @@ const HomePage = () => {
                         <video src={kijangInnovaVideo} type="video/mp4" autoPlay loop muted data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" />
                         <div className="mainKonten">
                             <h2>BEST SERVICES & CONSULTATION</h2>
-                            <h3>Lakukan konsultasi dengan Toyota Adviser, dapatkan informasi langsung <br /> seputar update harga, promo, diskon dan informasi test drive yang bisa kami hadirkan <br />Toyota Test Car kami ke rumah atau kantor anda.</h3>
+                            <h3>Lakukan konsultasi dengan Toyota Sales Kami, dapatkan informasi langsung <br /> seputar update harga, promo, diskon dan informasi test drive yang bisa kami hadirkan <br />Langsung ke rumah atau kantor anda.</h3>
                             <button className="btn btn-danger" onClick={handleWhatsAppChat}>KONSULTAN CHAT</button>
                         </div>
                     </Row>
@@ -103,7 +185,7 @@ const HomePage = () => {
                             <div className="image-with-text-raize">
                                 <h1 className="mt-5">BEST CAR OF THE YEAR</h1>
                                 <p>Jika anda mencari sebuah produk dengan harga yang terjangkau namun mendapatkan predikat sebagai mobil terbaik di setiap tahunnya, maka pilihan anda bersama Toyota adalah suatu hal yang sangat tepat.</p>
-                                <button className="btn btn-danger mb-4">CONTACT ADVISER</button>
+                                <button className="btn btn-danger mb-4" onClick={handleWhatsAppChatAdviser}>CONTACT ADVISER</button>
                             </div>
                         </Col>
                         <Col md={6}>
@@ -118,9 +200,11 @@ const HomePage = () => {
                                 <div className="text-choice text-center mt-4">
                                     <h2 className="fw-bold mb-4">GREAT CHOICE</h2>
                                     <h5>
-                                        Sebuah produk yang terlahir untuk menjadi solusi pada kehidupan manusia di bumi, menjadi kendaraan yang memudahkan mobilitas manusia di seluruh dunia dengan segala kondisi, cuaca dan medan apapun di berbagai negara di dunia.
+                                        Sebuah produk yang terlahir untuk menjadi
+                                        solusi pada kehidupan masyarakat Indonesia,
+                                        Menjadi kendaraan yang memudahkan mobilitas pengguna di seluruh Indonesia dengan segala kondisi, cuaca dan medan apapun diberbagai daerah di Indonesia
                                     </h5>
-                                    <button className="btn btn-danger mb-4" size="sm">OPEN CONSULTANT NOW</button>
+                                    <button className="btn btn-danger mb-4" size="sm" onClick={handleWhatsAppChat}>OPEN CONSULTANT NOW</button>
                                 </div>
                             </div>
                         </Col>
@@ -145,7 +229,6 @@ const HomePage = () => {
                         </Col>
                     </Row>
 
-
                 </Container>
                 <Container>
                     <Row>
@@ -159,7 +242,7 @@ const HomePage = () => {
                     </Row>
                 </Container>
             </div>
-            <div className="promo">
+            {/* <div className="promo">
                 <Container>
                     <Row className="justify-content-center align-items-center">
                         <Col md={6} className="text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
@@ -169,7 +252,7 @@ const HomePage = () => {
                     <Row>
                         {promo.map((data) => {
                             return (
-                                <Col md-4 key={data.id} md={3} className="productCard mt-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={data.delay}>
+                                <Col key={data.id} md={3} className="productCard mt-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={data.delay}>
                                     <Card className="promo-card shadow-sm mb-4">
                                         <Card.Img src={data.image} alt="productCard" />
                                         <Card.Body>
@@ -192,7 +275,7 @@ const HomePage = () => {
                         </Col>
                     </Row>
                 </Container>
-            </div>
+            </div> */}
             <div className="artikel">
                 <Container>
                     <Row>
@@ -353,7 +436,7 @@ const HomePage = () => {
                             <h3>
                                 Rasakan sensasi berkendara dengan mobil Toyota yang <br />dirancang untuk Anda dan keluarga hanya di Auto 2000
                             </h3>
-                            <button className="btn btn-danger rounded-pill px-4 py-2 mt-5">Booking Test Drive</button>
+                            <button className="btn btn-danger rounded-pill px-4 py-2 mt-5" onClick={handleWhatsAppChatTestDrive}>Booking Test Drive</button>
                         </Col>
                     </Row>
                 </Container>

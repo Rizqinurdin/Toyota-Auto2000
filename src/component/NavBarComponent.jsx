@@ -22,6 +22,14 @@ const NavBarComponent = () => {
         window.addEventListener("scroll", changeBackgroundColor);
     });
 
+    const handleWhatsAppChat = () => {
+        const phoneNumber = '+6285817211644';
+        const message = 'Halo, saya ingin memesan produk Toyota';
+        const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+        window.open(whatsappURL, '_blank');
+    };
+
+
     return (
         <div>
             <Navbar expand="lg" fixed="top" className={changeColor ? "color-active" : ""}>
@@ -43,7 +51,7 @@ const NavBarComponent = () => {
                             })}
                         </Nav>
                         <div>
-                            <button className="btn btn-outline-danger rounded-1">Book Now</button>
+                            <button className="btn btn-outline-danger rounded-1" onClick={handleWhatsAppChat}>Book Now</button>
                         </div>
                     </Navbar.Collapse>
                 </Container>

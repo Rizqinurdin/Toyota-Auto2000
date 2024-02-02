@@ -5,6 +5,13 @@ import { useNavigate } from "react-router-dom";
 const PromoComponent = () => {
 
     let navigate = useNavigate();
+
+    const handleWhatsAppChat = () => {
+        const phoneNumber = '+6285817211644';
+        const message = 'Halo, saya ingin menanyakan Promo Toyota';
+        const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+        window.open(whatsappURL, '_blank');
+    };
     return (
         <div className="allPromo-page">
             <div className="allPromo min-vh-100">
@@ -23,15 +30,18 @@ const PromoComponent = () => {
                     <Row>
                         {allPromo.map((data) => {
                             return (
-                                <Col md-4 key={data.id} md={3} className="productCard mt-4">
-                                    <Card className="promo-card shadow-sm mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={data.delay}>
-                                        <Card.Img src={data.image} alt="productCard" />
+                                <Col key={data.id} md={6} className="productCard mt-4">
+                                    <Card className="promo-card shadow-sm mb-4 w-100" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={data.delay}>
+                                        <div className="card-img-container">
+                                            <Card.Img src={data.image} alt="productCard" className="promo-img" />
+                                        </div>
                                         <Card.Body>
                                             <h5 className="fw-bold">{data.merkMobil}</h5>
                                             <Card.Text>
                                                 {data.promo}
                                             </Card.Text>
-                                            <Button variant="danger" onClick={(() => navigate("/detailPromo"))}>Read More</Button>
+                                            <h5>{data.title}</h5>
+                                            <Button variant="danger btn-sm mt-2" onClick={handleWhatsAppChat}>Detail Promo</Button>
                                         </Card.Body>
                                     </Card>
                                 </Col>
@@ -40,7 +50,7 @@ const PromoComponent = () => {
                     </Row>
                 </Container>
             </div>
-        </div>
+        </div >
     )
 }
 

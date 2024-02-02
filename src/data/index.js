@@ -523,7 +523,7 @@ export const innovaZenixProductHEV = [
         id: 1,
         image: MPV1,
         title: "All New Kijang Innova Zenix HEV",
-        price: "Rp Rp 471.600.000"
+        price: "Rp 471.600.000"
     }
 ]
 
@@ -532,7 +532,7 @@ export const innovaZenixProduct = [
         id: 1,
         image: MPV2,
         title: "All New Kijang Innova Zenix",
-        price: "Rp Rp 425.600.000"
+        price: "Rp 425.600.000"
     },
 ]
 

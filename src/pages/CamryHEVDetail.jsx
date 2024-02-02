@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import Camry from "../assets/img/camryHEV/1.jpg";
-import Camry1 from "../assets/img/camryHEV/8.pNG";
+import Camry1 from "../assets/img/camryHEV/8.png";
 import Camry2 from "../assets/img/camryHEV/9.jpg";
 import Camry3 from "../assets/img/camryHEV/10.jpg";
 import Camry4 from "../assets/img/camryHEV/11.jpg";
